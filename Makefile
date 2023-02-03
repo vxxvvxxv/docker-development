@@ -13,11 +13,11 @@ init-folders:
 
 .PHONY:init-docker
 init-docker:
-	docker-compose up
+	docker compose up
 
 .PHONY:run-all
 run-all:
-	cd clickhouse && docker-compose up -d && cd ..
-	cd nats && docker-compose up -d && cd ..
-	cd postgres && docker-compose up -d && cd ..
-	cd redis && docker-compose up -d && cd ..
+	cd clickhouse && docker compose up -d && cd ..
+	cd nats && docker compose up -d && cd ..
+	cd postgres && docker compose up -d && cd ..
+	cd redis && docker compose up -d && cd ..
