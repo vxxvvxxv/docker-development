@@ -1,0 +1,1 @@
+docker network connect bridge $1

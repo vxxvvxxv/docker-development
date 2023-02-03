@@ -5,12 +5,21 @@ services:
         image: postgres
         restart: always
         volumes:
-            - pgdata:/var/lib/postgresql/data
-            - pgbackup:/backup
+            - postgres_data:/var/lib/postgresql/data
+            - postgres_backup:/backup
+        networks:
+            - postgres
         environment:
             - POSTGRES_PASSWORD=postgres
         ports:
             - "5432:5432"
 volumes:
-    pgdata:
-    pgbackup:
+    postgres_data:
+        external: true
+    postgres_backup:
+        external: true
+
+networks:
+    default:
+        driver: bridge
+
