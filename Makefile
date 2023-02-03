@@ -1,15 +1,15 @@
 .PHONY:init-folders
 init-folders:
-	sh ./scripts/init_filder.sh clickhouse/data
-	sh ./scripts/init_filder.sh clickhouse/logs
-	# sh ./scripts/init_filder.sh mongo/backups
-	# sh ./scripts/init_filder.sh mongo/data
-	# sh ./scripts/init_filder.sh mongo/logs
-	# sh ./scripts/init_filder.sh mongo/reports
-	sh ./scripts/init_filder.sh nats/jetstream/n1/data
-	sh ./scripts/init_filder.sh nats/jetstream/n2/data
-	sh ./scripts/init_filder.sh nats/jetstream/n3/data
-	sh ./scripts/init_filder.sh redis/data
+	sh ./scripts/init_folder.sh clickhouse/data
+	sh ./scripts/init_folder.sh clickhouse/logs
+	# sh ./scripts/init_folder.sh mongo/backups
+	# sh ./scripts/init_folder.sh mongo/data
+	# sh ./scripts/init_folder.sh mongo/logs
+	# sh ./scripts/init_folder.sh mongo/reports
+	sh ./scripts/init_folder.sh nats/jetstream/n1/data
+	sh ./scripts/init_folder.sh nats/jetstream/n2/data
+	sh ./scripts/init_folder.sh nats/jetstream/n3/data
+	sh ./scripts/init_folder.sh redis/data
 
 .PHONY:init-docker
 init-docker:
