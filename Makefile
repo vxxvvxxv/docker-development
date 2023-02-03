@@ -1,5 +1,5 @@
 .PHONY:init-folders
-init:
+init-folders:
 	sh ./scripts/init_filder.sh clickhouse/data
 	sh ./scripts/init_filder.sh clickhouse/logs
 	# sh ./scripts/init_filder.sh mongo/backups
@@ -12,11 +12,11 @@ init:
 	sh ./scripts/init_filder.sh redis/data
 
 .PHONY:init-docker
-init:
+init-docker:
 	docker-compose up
 
 .PHONY:run-all
-run-dev:
+run-all:
 	cd clickhouse && docker-compose up -d && cd ..
 	cd nats && docker-compose up -d && cd ..
 	cd postgres && docker-compose up -d && cd ..
