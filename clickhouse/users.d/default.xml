@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<yandex>
+    <users>
+        <default>
+            <password>TvWCyTD7XWFc7o7cYe*sGXk6</password>
+            <!-- <password_sha256_hex>ab52004c942c3a91532d2093c32b1923dd48eedf9c1ab2c4b2357657c07cea49</password_sha256_hex> -->
+            <!-- <password_double_sha1_hex>0cef5b3f8a8d4f3437c6d9cb68b85d8ca9c7dbe8</password_double_sha1_hex> -->
+            <access_management>0</access_management>
+            <networks>
+                <ip>127.0.0.1</ip>
+            </networks>
+            <profile>default</profile>
+            <quota>default</quota>
+            <default_database>default</default_database>
+            <allow_databases>
+                <database>default</database>
+            </allow_databases>
+        </default>
+    </users>
+</yandex>

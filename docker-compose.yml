@@ -1,0 +1,46 @@
+version: "3"
+
+networks:
+  clickhouse-db:
+  nats:
+  redis-db:
+
+volumes:
+  clickhouse_db_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/clickhouse/data'
+  clickhouse_db_logs:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/clickhouse/logs'
+  jetstream_cluster_n1:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/nats/jetstream/n1/data'
+  jetstream_cluster_n2:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/nats/jetstream/n2/data'
+  jetstream_cluster_n3:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/nats/jetstream/n3/data'
+  redis_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/volume_fra1_01/redis/data'
+
+

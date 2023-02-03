@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+    clickhouse:
+        # image: lunalabsltd/clickhouse-server:21.7.2.7-arm
+        image: yandex/clickhouse-server
+        ulimits:
+            nproc: 65535
+            nofile:
+                soft: 262144
+                hard: 262144
+        restart: always
+        hostname: clickhouse-db
+        container_name: clickhouse-db
+        volumes:
+            - clickhouse_db_data:/var/lib/clickhouse # Store
+            - .clickhouse_db_logs:/var/log/clickhouse-server # Logs
+            - ./users.d:/etc/clickhouse-server/users.d #Users
+            - ./config.d/listen.xml:/etc/clickhouse-server/config.d/listen.xml #Listen
+        ports:
+            - "8123:8123"
+            - "9000:9000"
+
+volumes:
+    clickhouse_db_data:
+        external: true
+    clickhouse_db_logs:
+        external: true
+
+networks:
+    clickhouse-db:
+        external: true

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<yandex>
+    <users>
+        <wallet>
+            <password>4m4j-.YAj3gsyfe6WhX2HfsxJs2vVsmF322r3dMAPQc.</password>
+            <!-- <password_sha256_hex>73d2bd023a11b16e115276fbdba148e095907fbc49ca3052550f5431ee04cf33</password_sha256_hex> -->
+            <!-- <password_double_sha1_hex>6b9a8c55da1cb32326f87206452ab46b67cf9c01</password_double_sha1_hex> -->
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>default</profile>
+            <quota>default</quota>
+            <!-- <default_database>wallet</default_database> -->
+            <allow_databases>
+                <database>wallet</database>
+            </allow_databases>
+        </wallet>
+    </users>
+</yandex>
